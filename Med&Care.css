@@ -1,0 +1,147 @@
+.container{
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 250vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr 2fr 2fr 0.2fr;
+  grid-gap: 50px;
+  grid-template-areas:
+  "title nav"
+  "image_one text_one"
+  "text_two image_two"
+  "map form"
+  "footer footer";
+}
+@media (max-width: 500px) {
+  .container{
+    margin: 1%;
+    height: 500vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 0.3fr 1.5fr 2fr 2fr 2fr 1fr 2fr 0.1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+    "title"
+    "nav"
+    "image_one"
+    "text_one"
+    "text_two"
+    "image_two"
+    "map"
+    "form"
+    "footer";
+  }
+  .image_one{
+    margin-top: 30px;
+  }
+    iframe{
+    margin-top: 50px;
+  }
+  .form h2{
+    margin-top: 60px;
+  }
+}
+.title{
+  grid-area: title;
+  margin: auto;
+}
+.title h1{
+  margin: 0;
+  padding: 0;
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px blue;
+  color: white;
+}
+.title h4{
+  margin: 0;
+  padding: 0;
+  font-size: 200%;
+  text-align: right;
+  border-top: 2px solid blue;
+}
+nav{
+  grid-area: nav;
+  margin: auto;
+  transform: scale(1.7);
+  background-color: blue;
+  padding: 2px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px black;
+}
+nav:hover{
+  transform: scale(1.75);
+}
+nav a{
+  text-decoration: none;
+  color: black;
+  text-align: right;
+  text-transform: uppercase;
+  color: white;
+}
+.image_one{
+  grid-area: image_one;
+  background: url("./one.jpg");
+  background-size: cover;
+  box-shadow: 5px 5px 20px black;
+}
+.text_one{
+  grid-area: text_one;
+  font-family: sans-serif;
+  font-size: 150%;
+  margin: auto;
+  padding: 0 20px;
+  border-left: 5px solid blue;
+  margin-left: 10px;
+}
+.text_two{
+  grid-area: text_two;
+  font-family: sans-serif;
+  font-size: 150%;
+  margin: auto;
+  padding: 0 20px;
+  border-right: 5px double blue;
+  margin-right: 10px;
+}
+.image_two{
+  grid-area: image_two;
+  background: url("./three.jpg");
+  background-size: cover;
+  box-shadow: -5px -5px 20px black;
+}
+iframe{
+  grid-area: map;
+  border-radius: 5%;
+}
+.form{
+  grid-area: form;
+  text-align: center;
+  margin: auto;
+  font-size: 200%;
+}
+input{
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 20px;
+  display: block;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 20px;
+}
+input[type=submit]{
+  background-color: blue;
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px black;
+}
+input[type=submit]:hover{
+  transform: scale(0.98);
+}
+footer{
+  grid-area: footer;
+  text-align: center;
+  border-top: 5px solid blue;
+  font-size: 12px;
+}
